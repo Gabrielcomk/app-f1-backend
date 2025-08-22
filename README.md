@@ -7,13 +7,24 @@ Esta é uma API Node.js Express simples que fornece uma lista de equipes da F1 e
 1.  **Variáveis de Ambiente**:
     -   Crie um arquivo `.env` na raiz do projeto baseado no `.env.sample` e preencha suas credenciais de banco de dados.
 
-2.  **Iniciar com Docker Compose:**
+2.  **Instalação e Execução:**
+    -   Navegue até o diretório `backend`:
 
-    ```bash
-    docker-compose up --build
-    ```
+        ```bash
+        cd backend
+        ```
 
-    Isso irá construir as imagens, iniciar os contêineres do banco de dados e da aplicação, e importar o `database.sql` automaticamente.
+    -   Instale as dependências:
+
+        ```bash
+        npm install
+        ```
+
+    -   Inicie a aplicação:
+
+        ```bash
+        npm start
+        ```
 
     A API estará disponível em `http://localhost:3000`.
     A documentação do Swagger estará disponível em `http://localhost:3000/api-docs`.
@@ -26,9 +37,7 @@ Esta é uma API Node.js Express simples que fornece uma lista de equipes da F1 e
 
 ```
 . 
-├── docker-compose.yml    # Define e executa a aplicação Docker multi-container
 ├── backend/
-│   ├── Dockerfile        # Dockerfile para a aplicação Node.js
 │   ├── server.js         # Ponto de entrada principal da aplicação
 │   ├── package.json      # Dependências e scripts do projeto
 │   ├── package-lock.json # Versões exatas das dependências
