@@ -8,12 +8,6 @@ Esta é uma API Node.js Express simples que fornece uma lista de equipes da F1 e
     -   Crie um arquivo `.env` na raiz do projeto baseado no `.env.sample` e preencha suas credenciais de banco de dados.
 
 2.  **Instalação e Execução:**
-    -   Navegue até o diretório `backend`:
-
-        ```bash
-        cd backend
-        ```
-
     -   Instale as dependências:
 
         ```bash
