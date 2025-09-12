@@ -33,8 +33,8 @@ Esta é uma API Node.js Express simples que fornece uma lista de equipes da F1 e
 . 
 ├── backend/
 │   ├── server.js         # Ponto de entrada principal da aplicação
+│   ├── .env.sample           # Exemplo de arquivo de variáveis de ambiente
 │   ├── package.json      # Dependências e scripts do projeto
-│   ├── package-lock.json # Versões exatas das dependências
 │   └── src/
 │       ├── config/
 │       │   └── db.config.js  # Configuração de conexão com o banco de dados
@@ -48,7 +48,6 @@ Esta é uma API Node.js Express simples que fornece uma lista de equipes da F1 e
 ├── infra/
 │   └── db/
 │       └── database.sql  # Script SQL para o esquema do banco de dados e dados iniciais (com a lista confirmada de pilotos titulares e reservas da F1 2025)
-├── .env.sample           # Exemplo de arquivo de variáveis de ambiente
 ├── .gitignore            # Arquivos e diretórios a serem ignorados pelo Git
 └── README.md             # Documentação do projeto
 ```
