@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  db:
+    image: mysql:8.0
+    container_name: f1-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: f1_teams
+      MYSQL_USER: f1user
+      MYSQL_PASSWORD: f1pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./infra/db/database.sql:/docker-entrypoint-initdb.d/database.sql
+
+  app:
+    build: .
+    container_name: f1-backend
+    restart: always
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/f1_teams
+      SPRING_DATASOURCE_USERNAME: f1user
+      SPRING_DATASOURCE_PASSWORD: f1pass
+    ports:
+      - "8080:8080"
