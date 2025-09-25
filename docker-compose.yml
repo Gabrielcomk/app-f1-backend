@@ -15,14 +15,15 @@ services:
       - ./infra/db/database.sql:/docker-entrypoint-initdb.d/database.sql
 
   app:
-    build: .
+    build: ./backend
     container_name: f1-backend
     restart: always
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/f1_teams
-      SPRING_DATASOURCE_USERNAME: f1user
-      SPRING_DATASOURCE_PASSWORD: f1pass
+      DB_HOST: db
+      DB_USER: f1user
+      DB_PASSWORD: f1pass
+      DB_NAME: f1_teams
     ports:
       - "8080:8080"
